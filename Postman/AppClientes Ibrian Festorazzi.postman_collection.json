@@ -1,0 +1,772 @@
+{
+	"info": {
+		"_postman_id": "02f52e03-9d5c-4b93-98cc-ed55e7f54c29",
+		"name": "AppClientes Ibrian Festorazzi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13648861"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "GetClienteById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getCliente/id/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getCliente",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClienteByNombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getCliente/nombre?nombre=Maria",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getCliente",
+								"nombre"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Maria"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientesList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getClientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getClientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Pablo\",\r\n        \"apellido\": \"Paulini\",\r\n        \"fechaNacimiento\": \"1989-12-04\",\r\n        \"dni\": \"33500689\",\r\n        \"direccion\": \"Av Siempre Viva 123\",\r\n        \"telefono\": \"111222777\",\r\n        \"email\": \"pablo@hotmail.com\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/createCliente",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTelefonoClienteById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/updateClienteTelefono?id=1&tel=54236655",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateClienteTelefono"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "tel",
+									"value": "54236655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteClienteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/deleteCliente/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteCliente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEdadClienteById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getEdadCliente/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getEdadCliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getClientByDni",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Maria\",\r\n    \"apellido\": \"Lagrange\",\r\n    \"fechaNacimiento\": \"1934-12-25\",\r\n    \"dni\": \"333444666\",\r\n    \"direccion\": \"Marquez 200\",\r\n    \"telefono\": \"111222444\",\r\n    \"email\": \"maria@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/getClienteDni",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getClienteDni"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFacturasCliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getFacturasPorCliente/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getFacturasPorCliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "GetProductosByNombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getProductoByNombre?nombre=Age of empires",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getProductoByNombre"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Age of empires"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductoById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getProductoById/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getProductoById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductosList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getProductos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getProductos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProducto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Age of empires 4\",\r\n        \"descripcion\": \"RTS Tactico\",\r\n        \"plataforma\": \"PC\",\r\n        \"precio\": 8900.0,\r\n        \"categoria\": \"RTS\",\r\n        \"stock\": 54\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/createProducto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createProducto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProductoById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/deleteProducto/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteProducto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePrecioProductoById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/updatePrecioProducto?id=1&precio=12200",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updatePrecioProducto"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "precio",
+									"value": "12200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateStockProductoById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/updateStockProducto?id=12&cant=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateStockProducto"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "12"
+								},
+								{
+									"key": "cant",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductoByPlataforma",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getProductosPlataforma?plataforma=PC",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getProductosPlataforma"
+							],
+							"query": [
+								{
+									"key": "plataforma",
+									"value": "PC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductoByCategoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getProductosCategoria?categoria=RTS",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getProductosCategoria"
+							],
+							"query": [
+								{
+									"key": "categoria",
+									"value": "RTS"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductoByNombreYPlataforma",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getProductoByNombreYPlataforma?nombre=Age of empires 3&plataforma=PC",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getProductoByNombreYPlataforma"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Age of empires 3"
+								},
+								{
+									"key": "plataforma",
+									"value": "PC"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "GetEmpresaById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getEmpresaById/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getEmpresaById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEmpresasList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getEmpresasList",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getEmpresasList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateEmpresa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"razonSocial\": \"Futurex\",\r\n        \"rubro\": \"Games\",\r\n        \"cuit\": \"20292008089\",\r\n        \"sucursales\": []\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/createEmpresa",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createEmpresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEmpresaById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/deleteEmpresa/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteEmpresa",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DetalleFactura",
+			"item": [
+				{
+					"name": "CreateItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{      \"cantidad\": \"3\",\r\n        \"precioSubTotal\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/createItem",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetItemsList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getItemsList",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getItemsList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteItem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/deleteItem/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteItem",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCantidadItemById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/updateCantidadItem?id=1&cant=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateCantidadItem"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "cant",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Factura",
+			"item": [
+				{
+					"name": "facturarClienteNuevo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\": {\r\n    \"id\": 1,\r\n    \"nombre\": \"Ibrian\",\r\n    \"apellido\": \"Festorazzi\",\r\n    \"fechaNacimiento\": \"1933-12-24\",\r\n    \"dni\": \"333444555\",\r\n    \"direccion\": \"Colon 200\",\r\n    \"telefono\": \"11222333\",\r\n    \"email\": \"ibrian@gmail.com\"\r\n    },\r\n    \"idEmpresa\": 1,\r\n    \"detalleFacturaDtos\": [\r\n      {\r\n          \"nombreProducto\": \"Age of empires\",\r\n          \"plataformaProducto\": \"PC\",\r\n        \"cantidad\": 2\r\n      },\r\n      {\r\n        \"nombreProducto\": \"Age of empires 2\",\r\n        \"plataformaProducto\": \"PC\",\r\n        \"cantidad\": 1\r\n       }\r\n    ]\r\n} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/facturarCompraDto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturarCompraDto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "facturarClienteExistente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\": {\r\n    \"id\": 1,\r\n    \"nombre\": \"Ibrian\",\r\n    \"apellido\": \"Festorazzi\",\r\n    \"fechaNacimiento\": \"1933-12-24\",\r\n    \"dni\": \"333444555\",\r\n    \"direccion\": \"Colon 200\",\r\n    \"telefono\": \"11222333\",\r\n    \"email\": \"ibrian@gmail.com\"\r\n    },\r\n    \"idEmpresa\": 1,\r\n    \"detalleFacturaDtos\": [\r\n      {\r\n          \"nombreProducto\": \"Age of empires\",\r\n          \"plataformaProducto\": \"PC\",\r\n        \"cantidad\": 2\r\n      },\r\n      {\r\n        \"nombreProducto\": \"Age of empires 2\",\r\n        \"plataformaProducto\": \"PC\",\r\n        \"cantidad\": 1\r\n       }\r\n    ]\r\n} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/facturarCompraDto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturarCompraDto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFacturasList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getFacturasList",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getFacturasList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "otraCompraClienteExistente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\": {\r\n    \"id\": 1,\r\n    \"nombre\": \"Ibrian\",\r\n    \"apellido\": \"Festorazzi\",\r\n    \"fechaNacimiento\": \"1933-12-24\",\r\n    \"dni\": \"333444555\",\r\n    \"direccion\": \"Colon 200\",\r\n    \"telefono\": \"11222333\",\r\n    \"email\": \"ibrian@gmail.com\"\r\n    },\r\n    \"idEmpresa\": 1,\r\n    \"detalleFacturaDtos\": [\r\n      {\r\n          \"nombreProducto\": \"Age of empires\",\r\n          \"plataformaProducto\": \"PC\",\r\n        \"cantidad\": 2\r\n      }\r\n    ]\r\n} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/facturarCompraDto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"facturarCompraDto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFacturaById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getFacturaById/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getFacturaById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

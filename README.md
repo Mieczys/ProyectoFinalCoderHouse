@@ -1,4 +1,4 @@
-# :abacus:Proyecto Final - Java | Coderhouse
+# :abacus:Proyecto Final App Facturación - Java | Coderhouse
 
 El proyecto consiste en desarrollar una aplicación que 
 nos permita administrar las ventas de un comercio.
